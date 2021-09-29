@@ -1,2 +1,2 @@
-# HugoBatista.github.io
+# hugobatista.github.io
 My web site
