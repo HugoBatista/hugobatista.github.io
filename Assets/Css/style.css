@@ -1,0 +1,188 @@
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root{
+  --cor01: #0B0A0A; /*Black  */ 
+  --cor02: #ffffff; /*White  */
+  --cor03: #27374D;
+  --cor04: #526D82;
+  
+}
+
+body{
+    background-color: var(--cor02);
+    margin: 0px 10px 0px 10px ;
+}
+
+
+.header {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-menu{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.header-menu a{font-size:1.125rem;line-height:1.3rem;padding:10px 20px;text-decoration:none;color:#141414;display:block;position:relative}
+.header-menu a:after{content:"";display:block;height:1px;width:0;background-color: var(--cor04);margin-top:4px;transition:.3s;position:absolute}
+.header-menu a:hover::after{width:60%}
+.header-menu a:hover{color:var(--cor03)}
+@media(max-width: 800px){
+.header{flex-direction:column;gap:40px;padding:20px}
+}
+
+.card{
+  height: 250px;
+  width: 250px;
+  padding: 4px;
+  background: var(--cor08);
+  border-radius: 50%;
+  border: solid var(--cor04);
+}
+
+main{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  margin: 0 auto;
+  background-color: var(--cor06);
+  max-width: 1200px;
+}
+main::after {
+  grid-column: 1/-1;
+  justify-self: center;
+  display: block;
+  content: "";
+  width: 90%;
+  height: 2px;
+  margin-top: 40px;
+  background: var(--cor04);
+}
+
+.main-botoes{
+  grid-column:2;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-start;
+  align-items:center;gap:20px;
+  font-size: 1.75rem;
+}
+
+
+.main-curriculo,.main-github,.main-linkedin{padding:6px 16px;border:1px solid var(--cor03);border-radius:6px;transition:.3s}
+.main-curriculo:hover,.main-github:hover,.main-linkedin:hover{color:#fff;scale:1.05;box-shadow:20px 15px 20px -20px #000}
+.main-curriculo:hover{background:linear-gradient(var(--cor03), var(--cor04))}
+.main-github:hover{background:linear-gradient(#5b6571, #23272d)}
+.main-linkedin:hover{background:linear-gradient(#1b7cdd, #0a66c2)}
+
+
+a{
+  text-decoration: none;
+  font-weight: bold;
+  color : var(--cor01);
+  transition:.3s;
+  padding: 2px 5px;
+}
+
+
+.projetos{max-width:1200px;margin:0 auto 120px auto;padding:20px}
+        .projetos .role{display:none;font-weight:bold;margin-bottom:15px}
+        .projetos h2::after{display:block;content:"";width:100px;height:4px;background:var(--cor04)}
+        .projetos-unidade{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+        
+        .projetos-unidade picture img{transition:.3s;width:570px;}
+        .projetos-unidade picture img:hover{transition:.3s;transform:scale(1.1);box-shadow:20px 20px 20px -20px rgba(0,0,0,.4392156863)}
+        .projetos-lista li+li{margin-top:120px}
+        .projetos-lista picture{grid-row:1/5;max-width:600px}
+        .linguagens{align-self:flex-end;display:flex;flex-wrap:wrap;gap:0px 10px}
+        
+        .linguagens p{display:inline-block;padding:5px 5px;font-weight:bold;transition:.3s}
+        .linguagens p:hover{color: var(--cor04);transform:scale(1.05);transition:.3s}
+        .codeBtns{display:grid;grid-template-columns:auto auto;justify-content:center;gap:15px;grid-column:2;justify-self:flex-start;align-self:flex-end}
+        .codeBtns .btncode{padding:10px;border-radius:50%}.codeBtns .btncode img{display:block;width:25px;height:25px}.projeto-impar h3{text-align:right}
+        .projeto-impar picture{grid-column:2;justify-self:right}
+        .projeto-impar p{text-align:left}
+        .projeto-impar 
+        .linguagens{justify-content:end}
+        .projeto-impar 
+        .codeBtns{grid-column:1;justify-self:flex-end}
+  
+        .projetos-unidade .paragrafo{font-size:1rem }
+
+
+
+ul{margin:0px;padding:0px;list-style:none}
+h1,h1,h3,p,a{margin:0px;letter-spacing:.14rem}
+
+
+.formacao{background:#3d3d3d;color:#fff;padding:120px 20px}
+.container{max-width:1200px;margin:0 auto}
+.formacao h2{font-size:9rem;color:#000;margin:0}
+.formacao h2::after{display:inline-block;content:"";width:16px;height:16px;background:var(--cor04);border-radius:50%;margin-left:5px}
+.grade{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:40px;margin-top:40px;margin-bottom:40px}
+.deco2{justify-self:end;align-self:end}
+.tecno{grid-column:1/3;background-color:#0a0a0a;border:1px solid var(--cor04);border-radius:5px;padding:20px;display:flex;flex-wrap:wrap;flex-direction:column;gap:20px;transition:.3s}
+.tecno p,.curso p{color:#f0f0f0;font-size:1rem}
+.tecno p strong,.curso p strong{font-size:1.5rem}
+.titulo-fraco{color:#ccc;font-size:1.25rem;margin:0}.curso .time,.tecno .time{color:#ccc;font-size:1.25rem;margin:0}
+.estagio{display:flex;flex-wrap:wrap;flex-direction:column;gap:25px;background-color:#0a0a0a;border:1px solid var(--cor03);border-radius:5px;padding:20px;transition:.3s}
+.curso{display:flex;flex-wrap:wrap;flex-direction:column;gap:25px;background-color:#0a0a0a;border:1px solid #6c6c6c;border-radius:5px;padding:20px;transition:.3s}
+.curso:hover{transition:.3s;transform:scale(1.1)}
+.tecno:hover{transition:.3s;transform:scale(1.1)}
+.p-extend{flex:1}
+.soft-skills,.hard-skills,.idiomas{padding:20px}
+.titulo-3{color:#ccc;font-size:1.25rem;position:relative;transition:.3s}
+.titulo-3::before{display:inline-block;content:"";width:5px;height:16px;background:var(--cor04);margin-right:16px;transition:.3s}
+.titulo-3:hover:before{width:20px;transition:.3s}
+.grade-2{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin:20px 0}
+.soft-skills p,.hard-skills p,.idiomas p{font-size:1.5rem;line-height:2.25rem}
+.grade-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin:20px 0}
+.grade-4{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin:20px 0}
+.bloco{transition:.3s}.bloco:hover{transition:.3s;transform:scale(1.01)}
+
+.info-contatos {
+  gap: 20px;
+  grid-column: 2;
+  grid-row: 1/3;
+}
+
+
+
+.contatos .container {
+  display: grid;
+  grid-template-columns: 400px 400px;
+  padding: 120px 40px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  gap: 5px 50px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contatos {
+  background-color: #000000;
+  color: #f3f3f3;
+  font-size: 1.25rem;
+}
+
+
+.footer {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 20px;
+}
+footer {
+  background-color: #000;
+  color: #b4b4b4;
+  border-top: solid 1px #121212;
+}          
