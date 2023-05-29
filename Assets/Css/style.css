@@ -36,8 +36,22 @@ body{
 
 
 .card{
+  
+  display: flex;
+    flex: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 12px;
+}
+
+
+.card_img{
   height: 250px;
   width: 250px;
+  object-fit: cover;
+  object-position: bottom;
   padding: 4px;
   background: var(--cor08);
   border-radius: 50%;
@@ -122,7 +136,9 @@ ul{margin:0px;padding:0px;list-style:none}
 h1,h1,h3,p,a{margin:0px;letter-spacing:.14rem}
 
 
-.formacao{background:#3d3d3d;color:#fff;padding:120px 20px}
+.formacao{background:#3d3d3d;color:#fff;padding:120px 20px; width: 100%;}
+
+
 .container{max-width:1200px;margin:0 auto}
 .formacao h2{font-size:9rem;color:#000;margin:0}
 .formacao h2::after{display:inline-block;content:"";width:16px;height:16px;background:var(--cor04);border-radius:50%;margin-left:5px}
@@ -165,13 +181,41 @@ h1,h1,h3,p,a{margin:0px;letter-spacing:.14rem}
   .projetos-lista li+li{margin-top:0px}
   .proj{position:relative}
   .proj::after{content:"→";font-weight:bold;position:absolute;top:-35px;right:30px;color:var(--cor04);font-size:1.25rem;animation:seta .5s ease-in 0s infinite alternate}
-  .projetos-unidade h3,.projetos-unidade p{text-align:center}.linguagens,.projeto-impar .linguagens,.projetos-unidade h3{justify-content:center;margin:0 auto}
+  .projetos-unidade h3,.projetos-unidade p{
+    text-align:center
+  }.linguagens,.projeto-impar .linguagens,.projetos-unidade h3{
+    justify-content:center;
+    padding-bottom: 20%;
+  
+  }
+
+
+
   .linguagens{align-self:center}
-  .projeto-impar .codeBtns,.projetos-unidade .codeBtns{grid-column:1;justify-self:center}}
+  .projeto-impar .codeBtns,.projetos-unidade .codeBtns{grid-column:1;justify-self:center}
+  .projetos-unidade picture img {
+    transition: .3s;
+    width: 530px;
+  }
+}
 
 
-@media(max-width: 490px){.projetos-unidade{grid-template-rows:72px 168px auto 64px;width:300px}
-            .projetos-unidade .paragrafo{font-size:1rem}}
+@media(max-width: 490px){
+.projetos-unidade{
+  grid-template-rows:72px 168px auto 64px;
+  width:300px;
+}
+.projetos-unidade .paragrafo{
+  font-size:1rem;
+  text-align: initial;
+
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+}
 
 @media (max-width:900px){
   
@@ -182,11 +226,7 @@ h1,h1,h3,p,a{margin:0px;letter-spacing:.14rem}
 }
 
 
-.card {
-    max-width: 250px;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 
 .projetos-unidade picture img:hover{transition:.3s;transform:scale(1.1);box-shadow:20px 20px 20px -20px rgba(0,0,0,.4392156863)}
 
@@ -319,10 +359,46 @@ p{
   padding:20px;  
 }
 
+
 .formacao h2 {
   font-size: 5rem;
   color: #000;
   margin: 0px;
+}
+main{
+  display: block;
+}
+p{
+  text-align: initial;
+  margin: 0px 0px;
+}
+
+.projetos-lista{display:flex;
+  gap:230px;
+  padding-bottom:20px;
+  margin-left:auto;
+  margin-right:auto;
+  overflow-x:auto;
+}
+
+.projetos-unidade {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 320px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--cor04);
+  border-radius: 4px;
+  padding: 20px;
+}
+
+
+
+.projetos-unidade picture img {
+  transition: .3s;
+  margin-top: 15%;
+  width: 100%;
+  transform:scale(1.7s)
 }
 
 .tecno:hover,.estagio:hover,.curso:hover{
