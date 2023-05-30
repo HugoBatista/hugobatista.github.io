@@ -47,6 +47,7 @@ h1,h1,h3,p,a{margin:0px;letter-spacing:.14rem}
 
 
 main{
+  text-align:center;
     min-width: 300px;
     max-width: 1200px;
     margin: auto;
@@ -66,6 +67,22 @@ main{
     width: 600px;
   }
 
+  .imagem:hover{
+    transform:scale(1.1);
+    transition:.3s;
+
+  }
   .projetos{
     margin-left: 10px;
+  }
+
+  .paragrafo{
+    font-size:1rem;
+    text-align: center;
+
+     margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
   }
