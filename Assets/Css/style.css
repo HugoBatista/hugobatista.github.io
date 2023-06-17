@@ -104,6 +104,9 @@ a{
   transition:.3s;
   padding: 2px 5px;
 }
+.experiencia{max-width:1200px;margin:0 auto 120px auto;padding:20px}
+.experiencia .role{display:none;font-weight:bold;margin-bottom:15px}
+.experiencia h2::after{display:block;content:"";width:100px;height:4px;background:var(--cor04)}
 
 
 .projetos{max-width:1200px;margin:0 auto 120px auto;padding:20px}
