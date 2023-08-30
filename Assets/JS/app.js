@@ -7,7 +7,7 @@ function changeLanguage(select) {
     // Determine a URL da página do idioma selecionado
     let pageUrl;
     if (selectedLanguage === "en") {
-        pageUrl = "/Users/0utdetad/Documents/GitHub/hugobatista.github.io/index.html";
+        pageUrl = "/index.html";
     } else if (selectedLanguage === "pt") {
         pageUrl = "./Assets/Html/index-pt.html";
     }
